@@ -5,6 +5,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+var bcrypt = require('bcrypt');
+
 app.use(express.static(path.join(__dirname, './client')));
 require('./server/config/mongoose.js');
 
